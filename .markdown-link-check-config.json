@@ -1,0 +1,17 @@
+{
+  "aliveStatusCodes": [429, 200],
+  "ignorePatterns": [
+    {
+      "pattern": "^http://www5.in.tum.de/pub/int/"
+    },
+    {
+      "pattern": "^https://onlinelibrary.wiley.com/"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "https://precice.org/"
+    }
+  ]
+}

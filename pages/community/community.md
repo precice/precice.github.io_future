@@ -12,7 +12,7 @@ editme: true
 
 ## preCICE workshop 2021
 
-Continuing from the success of the [preCICE Workshop 2020](precice-workshop-2020.html), we are pleased to announce the 2nd preCICE Workshop to be held from the **22nd to 25th of February 2021** in Stuttgart, Germany. We are excited to continue to interact with all users/developers/interested-persons and enthusiasts of preCICE. [Learn more ...](precice-workshop-2021.html)
+Continuing from the success of the [preCICE Workshop 2020](/precice-workshop-2020.html), we are pleased to announce the 2nd preCICE Workshop to be held from the **22nd to 25th of February 2021** in Stuttgart, Germany. We are excited to continue to interact with all users/developers/interested-persons and enthusiasts of preCICE. [Learn more ...](precice-workshop-2021.html)
 
 ## How our community is using preCICE
 

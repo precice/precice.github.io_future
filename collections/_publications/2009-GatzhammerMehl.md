@@ -1,6 +1,6 @@
 ---
 title: "FSI*ce -- A Modular Simulation Environment for Fluid-Structure Interactions"
-pub-url: http://www5.in.tum.de/pub/int/mehl_gatzhammer_fsiherrsching08.pdf
+pub-url: http://www.uni-kassel.de/upress/online/frei/978-3-89958-666-4.volltext.frei.pdf
 year: 2009
 authors: "Bernhard Gatzhammer, Miriam Mehl"
 ---

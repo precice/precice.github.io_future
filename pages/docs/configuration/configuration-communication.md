@@ -15,7 +15,7 @@ For each two participants that should exchange data, you have to define an m2n c
 
 This establishes an `m2n` (i.e. parallel, from the M processes of the one participant to the N processes of the other) communication channel based on TCP/IP `sockets` between `MySolver1` and `MySolver2`.
 
-For certain systems, you need to specify the network over which the TCP/IP sockets get connected: `network="..."`. It defaults to `"lo"`. For some clusters, you could use the infiniband, e.g. `"ib0"`. macOS is also a [special case](macOS).  
+For certain systems, you need to specify the network over which the TCP/IP sockets get connected: `network="..."`. It defaults to `"lo"`. For some clusters, you could use the infiniband, e.g. `"ib0"`. For macOS, use `network="lo0"`.
 
 The alternative to TCP/IP sockets is MPI ports (an MPI 2.0 feature):
 
@@ -23,13 +23,13 @@ The alternative to TCP/IP sockets is MPI ports (an MPI 2.0 feature):
 <m2n:mpi .../>
 ```
 
-As the ports functionality is not a highly used feature of MPI, it has robustness issues for several MPI implementations ([for OpenMPI, for example](TODO)). In principle, MPI gives you faster communication roughly by a factor of 10, but, for most applications, you will not feel any difference as both are very fast. We recommend using `sockets`.
+As the ports functionality is not a highly used feature of MPI, it has robustness issues for several MPI implementations (see [related issue](https://github.com/precice/precice/issues/746)). In principle, MPI gives you faster communication roughly by a factor of 10, but, for most applications, you will not feel any difference as both are very fast. We recommend using `sockets`.
 
-Which participant is `from` and which one is `to` makes almost no difference and cannot lead to deadlock. Only for massively parallel runs, it can make a performance difference at initialization. For such cases, [ask us for advice](TODO).
+Which participant is `from` and which one is `to` makes almost no difference and cannot lead to deadlock. Only for massively parallel runs, it can make a performance difference at initialization. For such cases, [ask us for advice](community-channels.html).
 
-The `exchange-directory` should point to the same location for both participants. We use this location to exchange hidden files with initial connection information. It defaults to `"."`, i.e. both participants need to be started in the same folder. We give some best practices on how to arrange your folder structure and start the coupled solvers [here](TODO).  
+The `exchange-directory` should point to the same location for both participants. We use this location to exchange hidden files with initial connection information. It defaults to `"."`, i.e. both participants need to be started in the same folder. Similarly to our [tutorials](tutorials.html), we recommend that you organize your cases in a separate directory for each participant, start these participants from inside these directories, and use the relative path to the `precice-config.xml` as `exchange-directory`.
 
-{% include important.html content="If you face any problems with establishing the communication, have a look [here](TODO)." %}
+{% include important.html content="If you face any problems with establishing the communication, e.g. your participants are stuck at `Setting up master communication to coupling partner/s`, have a look at our [FAQ](https://precice.discourse.group/t/help-the-participants-are-not-finding-each-other/646)." %}
 
 ## Advanced: the master tag
 

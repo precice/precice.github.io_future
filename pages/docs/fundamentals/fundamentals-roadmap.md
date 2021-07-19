@@ -19,7 +19,7 @@ If you are looking for features introduced already in the past, have a look at o
   - Create a Community section to better communicate the size and contributions of the community, provide contribution guides (done)
   - Getting preCICE: first choose the target system, then get instructions for the specific system (coming soon)
 - Provide a reference **virtual machine image** with preCICE already installed ([done](https://github.com/precice/vm))
-- Keep investing on **[Spack](https://github.com/precice/precice/wiki/preCICE-with-Spack)**
+- Keep investing on **[Spack](installation-spack.html)**
 - Extend **documentation on "How to write an adapter"** (e.g. for mesh generation and moving meshes) ([done](couple-your-code-overview.html))
 - Develop a **tutorial on electromagnetics**
 - Allow **solver-based data mapping** to support higher order shape functions
